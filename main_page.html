@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Main Page</title>
+		<style>
+		.clickable{
+			color:blue;
+		} 
+		</style>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+		<h1> 天眼通 </h1>
+		<p id="sign-in" class="clickable" data-toggle="modal" data-target="#myModal"> 登入 </p>
+		<p> or  </p>
+		<!---<p id="register" class="clickable"> 註冊 </p> -->
+		<img src = weibo.png> <br>
+		<script>
+			var logging = document.getElementById('sign-in');
+			logging.addEventListener('mouseover',mouseMoveIn,false);
+			function mouseMoveIn(){
+				this.style.textDecoration='underline';
+				this.style.color='red';
+				this.style.cursor= 'pointer';
+			};
+			logging.addEventListener('mouseout',mouseMoveOut,false);
+			function mouseMoveOut(){
+				this.style.textDecoration='none';
+				this.style.color='blue';
+			};
+			/*logging.addEventListener('click',mouseClick ,false);
+			function mouseClick(){
+				document.location.href="search_place.html";
+				//logging.style.color='red';
+			}; */
+		</script>
+
+		<!-- Button trigger modal -->
+		<!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">登入</button> -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  			<div class="modal-dialog">
+    			<div class="modal-content">
+      				<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      				</div>
+      				<div class="modal-body">
+        				
+      				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        				<button type="button" class="btn btn-primary">Save changes</button>
+      				</div>
+    			</div><!-- /.modal-content -->
+  			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<div id="demo" class="collapse in"> Hello world!</div>
+		<p class="clickable" data-toggle="collapse" data-target="#demo">註冊</p>
+
+		
+	</body>
+
+</html>
